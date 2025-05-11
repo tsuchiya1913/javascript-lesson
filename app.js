@@ -130,21 +130,24 @@ console.log()
 myFunc(output);
 
 //Q3
-let num = -1;
+let num;
+num = 9;
 if (num > 0){
   console.log('num is greater than 0')
-};
-if (num < 0){
+} else if (num < 0){
   console.log('num is less than 0')
-};
-if (num === 0){
+} else if (num === 0){
   console.log('num is 0')
 };
 
 //Q4
 let numbers = [];
-for (numbers = 0; numbers <= 99; numbers++) {
-  console.log(numbers);
+for (let i = 0; i <= 99; i++) {
+  numbers.push(i)
+};
+
+for (let i = 0; i < numbers.length; i++){
+  console.log(numbers[i]);
 }
 
 //Q5
