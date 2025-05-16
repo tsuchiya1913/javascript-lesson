@@ -29,7 +29,7 @@ let user;
 };
 console.log(user.age)
 
-//Q4
+//Q4!
 let playerList = [
   {
     name: 'John',
@@ -74,7 +74,6 @@ user = {
 };
 user.sayHello();
 console.log(user.birthday)
-user.sayHello();
 
 //Q8
 let calc = {
@@ -96,12 +95,18 @@ calc.subtract(29,19);
 calc.multiply(7,7);
 calc.divide(25,5);
 
-//Q9
+//Q9!　宿題！→ OK ハードコーデイングではなく
 function reminder (x,y){
-  let back =  x % y
+  let back = x % y
   return back;
 };
-console.log('5を3で割った余りは' + reminder(5,3) + 'です。')
+let x;
+let y;
+
+x = 6;
+y = 3;
+
+console.log(x + 'を' + y + 'で割った余りは' +reminder(x,y)  + 'です。')
 
 //Q10
 /*
@@ -115,55 +120,66 @@ function外で変数を定義し、再代入という形で対応することが
 let numb = Math.floor(Math.random() * 9) + 1;
 console.log(numb)
 
-//Q2
+//Q2!
 function myFunc (callback){
 setTimeout (function(){
-  console.log('Hello World!');
   callback();
 },3000)
 }
 
 function output(){
-console.log()
+  console.log('Hello World!');
 }
 
 myFunc(output);
 
 //Q3
 let num;
-num = 9;
+num = 0;
 if (num > 0){
   console.log('num is greater than 0')
 } else if (num < 0){
   console.log('num is less than 0')
-} else if (num === 0){
+} else {
   console.log('num is 0')
 };
 
-//Q4
+/*コーディング規約　宿題！
+エンジニア、プログラマーが複数人で同一タスクやプロジェクトを行う際にソースコードについて定めるルール
+全員しっかり読みやすくするためにある概念 */
+
+//Q4!　for文の認識→処理順を勉強 宿題
 let numbers = [];
 for (let i = 0; i <= 99; i++) {
   numbers.push(i)
 };
+console.log(numbers)
 
-for (let i = 0; i < numbers.length; i++){
-  console.log(numbers[i]);
+/*for (①初期値;②条件式;③後処理){
+  ④繰り返す処理
 }
+まず①が初期値として変数に代入され、②の条件式がチェックされる。
+条件式がtrueだった場合、④のくり返す処理が実行される。以降②の条件式がfalseになるまで④が処理される。
+falseだった場合、処理が終了される。
 
-//Q5
+上記Q4の場合、変数iに0が代入され、以降1ずつ足され変数numbersに格納される。
+この処理が99になるまで繰り返される。
+*/
+
+/*for (let i = 0; i < numbers.length; i++){
+  console.log(numbers[i]);
+}; */
+
+//Q5! ＝Q３と同じように書く→ OK　　<調べて持ってきたコードは理解するようにする>　
 let mixed = [4, '2', 5, '8', '9', 0, 1];
 
 for (let i = 0; i < mixed.length; i++){
   let item = mixed[i];
-
-  if (typeof item === 'number' && !isNaN(item)){
-    if (item % 2 === 0){
-      console.log(item + 'even');
+    if (typeof item  === 'number' && !isNaN(item) && item % 2 === 0){
+      console.log(item + 'even')
+    } else if (typeof item === 'number' && !isNaN(item) && item % 2 === 1){
+      console.log(item + 'odd')
     } else {
-      console.log(item + 'odd');
-    }
-  }
-  else {
-      console.log(item + 'not number');
+      console.log( item + 'not number')
     }
   }
